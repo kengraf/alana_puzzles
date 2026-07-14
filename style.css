@@ -1,0 +1,29 @@
+/* 1. Tell the browser where to find your font file */
+@font-face {
+    font-family: 'Aurebesh';
+    src: url('fonts/aurebesh.woff2') format('woff2'),
+         url('fonts/aurebesh.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Prevents text from being invisible while loading */
+}
+
+/* 2. Global styling rules */
+body {
+    background-color: #0c0c0c;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* 3. Class to turn standard text into Aurebesh symbols */
+.aurebesh-text {
+    font-family: 'Aurebesh', sans-serif;
+    font-size: 1.5rem;
+    color: #ffe81f; /* Star Wars yellow tint */
+    letter-spacing: 2px;
+    
+    /* Forces modern browsers to display dual-letter symbols (SH, TH, OO) */
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
+}
